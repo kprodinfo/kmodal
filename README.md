@@ -1,3 +1,5 @@
+Демо можно увидеть  [здесь](https://modals.kprod.info/ "modals.kprod.info")
+
 # Использование
 **1. Скачайте и установите kmodal**
 
