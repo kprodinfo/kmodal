@@ -1,0 +1,8 @@
+bower_components
+node_modules
+app
+bower.json
+gulpfile.js
+package.json
+package-lock.json
+.idea
