@@ -113,6 +113,58 @@ body {
     .site__open-modal:hover {
       cursor: pointer;
       background: #E1A414; }
+    @media (max-width: 400px) {
+      .site__open-modal {
+        width: 100%;
+        min-width: 250px; } }
+  .site__buttons-group {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex; }
+    @media (max-width: 400px) {
+      .site__buttons-group {
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+        -webkit-flex-direction: column;
+            -ms-flex-direction: column;
+                flex-direction: column; } }
+  .site__github {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+    -webkit-justify-content: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    background: #ffc014;
+    color: #000;
+    border: 0;
+    -webkit-border-radius: 5px;
+            border-radius: 5px;
+    height: 60px;
+    padding: 0 15px;
+    font-size: 24px;
+    font-weight: 900;
+    margin-top: 20px;
+    text-decoration: none;
+    -webkit-transition: .4s;
+    -o-transition: .4s;
+    transition: .4s;
+    margin-left: 15px; }
+    .site__github:hover {
+      cursor: pointer;
+      background: #E1A414; }
+    @media (max-width: 400px) {
+      .site__github {
+        width: 100%;
+        min-width: 250px;
+        margin-left: 0; } }
 
 .logo {
   display: -webkit-box;
