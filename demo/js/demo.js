@@ -1,1 +1,0 @@
-$("document").ready(function(){new Kmodal("#start",{init:!0,escClose:!0,overlayClose:!0,effect:"scale",hashOpen:!1,on:{open:"",close:""},thisOpenElem:""}),new Kmodal("#demo",{youtube:{id:"OECDEoav8IE",autoplay:0,rel:0,controls:0,showinfo:0}})});
