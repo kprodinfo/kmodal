@@ -28,6 +28,7 @@ function Kmodal(modal, options) {
             overlayClose: true,
             effect: 'fadeInTop',
             transition: '.4s',
+            paddingElements: '',
             hashOpen: false,
             youtube: {
                 id: 0,
@@ -79,7 +80,7 @@ function Kmodal(modal, options) {
 
 Kmodal.prototype.init = function () {
     var _this = this;
-    $($(_this.openEl).parent()).on(Events.CLICK, _this.openEl, function () {
+    $(_this.openEl).on(Events.CLICK,  function () {
         _this.open(this);
     });
     $(_this.closeEl).on(Events.CLICK, function () {
@@ -143,6 +144,7 @@ Kmodal.prototype.open = function (selector) {
 
     if (Selectors.d.outerHeight() > $(window).outerHeight()) { // Смотрим, нужно ли добавлять отступ вместо скроллбара
         Selectors.b.css('padding-right', this.scrollBarWidth);
+        $(this.options.paddingElements).css('padding-right', this.scrollBarWidth);
     }
 
     this.options.status = true; // Ставим статус, что текущее окно открыто
@@ -156,6 +158,7 @@ Kmodal.prototype.open = function (selector) {
 Kmodal.prototype.close = function () {
     this.modal.removeClass(ClassList.ACTIVE); // Закрываем текущее окно
     Selectors.b.removeClass(ClassList.BODY_ACTIVE).css('padding-right', ''); // Убираем класс с боди и сбрасываем паддинг
+    $(this.options.paddingElements).css('padding-right', '');
     this.options.status = false; // Ставим статус, что текущее окно закрыто
     this._events_close.map(function (e) { // Выполняем коллбеки
         e();
